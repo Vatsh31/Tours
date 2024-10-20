@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Tours</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#home">Explore Tours</a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Open menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home">
+        <div class="hero">
+            <h2>Discover Your Next Adventure</h2>
+            <p>Explore the best tour packages and experiences around the world.</p>
+            <a href="#tours" class="btn">View Tours</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service">
+                    <h3>Guided Tours</h3>
+                    <p>Explore new destinations with our expert guides.</p>
+                </div>
+                <div class="service">
+                    <h3>Travel Packages</h3>
+                    <p>Comprehensive packages for a complete travel experience.</p>
+                </div>
+                <div class="service">
+                    <h3>Custom Itineraries</h3>
+                    <p>Personalized travel plans based on your preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tours">
+        <div class="container">
+            <h2>Our Popular Tours</h2>
+            <div class="tour-list">
+                <div class="tour">
+                    <img src="tour1.jpg" alt="Paris City Tour">
+                    <h3>Paris City Tour</h3>
+                    <p>Explore the beautiful city of Paris with a guided tour.</p>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+                <div class="tour">
+                    <img src="tour2.jpg" alt="Safari Adventure">
+                    <h3>Safari Adventure</h3>
+                    <p>Experience the thrill of the wild in an exciting safari.</p>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+                <div class="tour">
+                    <img src="tour3.jpg" alt="Beach Vacation">
+                    <h3>Beach Vacation</h3>
+                    <p>Relax on pristine beaches with our exclusive vacation packages.</p>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="gallery1.jpg" alt="Gallery Image 1">
+                    <figcaption>Beautiful Landscape</figcaption>
+                </figure>
+                <figure>
+                    <img src="gallery2.jpg" alt="Gallery Image 2">
+                    <figcaption>Mountain View</figcaption>
+                </figure>
+                <figure>
+                    <img src="gallery3.jpg" alt="Gallery Image 3">
+                    <figcaption>City Lights</figcaption>
+                </figure>
+                <figure>
+                    <img src="gallery4.jpg" alt="Gallery Image 4">
+                    <figcaption>Beach Sunset</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a travel agency dedicated to offering the best tours and travel experiences worldwide. Our team of experts is here to help you find the perfect adventure for you and your loved ones.</p>
+            <h3>Our Team</h3>
+            <ul class="team-list">
+                <li>John Doe - Founder</li>
+                <li>Jane Smith - Tour Guide</li>
+                <li>Emily Johnson - Travel Consultant</li>
+                <li>Michael Brown - Operations Manager</li>
+            </ul>
+            <h3>Our Achievements</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Award</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023</td>
+                        <td>Best Tour Agency</td>
+                        <td>Travel & Leisure</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>Top Destination</td>
+                        <td>World Travel Awards</td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>Customer Service Excellence</td>
+                        <td>Travel Weekly</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name: <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError"></span>
+
+                <label for="email">Email: <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+
+                <label for="message">Message: <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span class="error" id="messageError"></span>
+
+                <label for="date">Preferred Date: <span class="required">*</span></label>
+                <input type="date" id="date" name="date" required>
+                <span class="error" id="dateError"></span>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            let isValid = true;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const date = document.getElementById('date').value;
+
+            // Clear previous errors
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('messageError').textContent = '';
+            document.getElementById('dateError').textContent = '';
+
+            // Name validation
+            if (!name) {
+                document.getElementById('nameError').textContent = 'Name is required.';
+                isValid = false;
+            }
+
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Valid email is required.';
+                isValid = false;
+            }
+
+            // Message validation
+            if (!message) {
+                document.getElementById('messageError').textContent = 'Message is required.';
+                isValid = false;
+            }
+
+            // Date validation
+            if (!date) {
+                document.getElementById('dateError').textContent = 'Preferred date is required.';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Explore Tours. All rights reserved.</p>
+            <p><a href="#contact">Contact Us</a></p>
+        </div>
+    </footer>
+</body>
+</html>
